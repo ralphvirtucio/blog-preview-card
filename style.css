@@ -52,7 +52,10 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   background-color: var(--primary-color-1);
-  font-family: var(--ff-figtree)
+  font-family: var(--ff-figtree);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* A elements that don't have a class get default styles */
@@ -91,3 +94,66 @@ select {
   }
 }
 
+
+.card {
+  background-color: #ffff;
+  padding-inline: 1rem;
+  padding-block: 1rem;
+  border-radius: 12px;
+  max-width: 20rem;
+  border: 1px solid var(--neutral-color-3);
+  box-shadow: 8px 8px 0 rgb(0, 0, 0);
+}
+
+
+.card__img img {
+  border-radius: 12px;
+}
+
+.card__tag {
+  background-color: var(--primary-color-1);
+  width: max-content;
+  padding-inline: .5rem;
+  padding-block: .25rem;
+  border-radius: 4px;
+  font-size: .75rem;
+  font-weight: var(--fw-800);
+  color: var(--neutral-color-3);
+  margin-block-start: 1rem;
+  margin-block-end: .75rem;
+}
+
+.card__date {
+  font-weight: var(--fw-500);
+  font-size: .75rem;
+}
+
+.card__content--info {
+  margin-block: 1rem;
+}
+
+.card__title {
+  font-size: 1.25rem;
+  font-weight: var(--fw-800);
+  margin-block-end: 1rem;
+}
+
+.card__description {
+  color: var(--neutral-color-2);
+  line-height: 1.25;
+}
+
+.card__author--profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card__profile--img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.card__profile--name {
+  font-weight: var(--fw-800);
+}
