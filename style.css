@@ -94,13 +94,20 @@ select {
   }
 }
 
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+}
+
 
 .card {
   background-color: #ffff;
   padding-inline: 1rem;
   padding-block: 1rem;
   border-radius: 12px;
-  max-width: 20rem;
+  max-width: 23rem;
   border: 1px solid var(--neutral-color-3);
   box-shadow: 8px 8px 0 rgb(0, 0, 0);
 }
@@ -126,6 +133,7 @@ select {
 .card__date {
   font-weight: var(--fw-500);
   font-size: .75rem;
+  color: var(--neutral-color-3);
 }
 
 .card__content--info {
@@ -133,20 +141,40 @@ select {
 }
 
 .card__title {
-  font-size: 1.25rem;
-  font-weight: var(--fw-800);
   margin-block-end: 1rem;
 }
 
+.card__title a {
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: var(--fw-800);
+  color: var(--neutral-color-3);
+  transition: color .2s ease-in-out;
+}
+
+.card__title a:link, .card__title a:visited {
+  color: var(--neutral-color-3);
+}
+
+.card__title a:focus, .card__title a:active {
+  color: var(--primary-color-1);
+}
+
+.card__title a:hover {
+  color: var(--primary-color-1);
+}
+
+
+
 .card__description {
   color: var(--neutral-color-2);
-  line-height: 1.25;
 }
 
 .card__author--profile {
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-block-end: .85rem;
 }
 
 .card__profile--img {
@@ -156,4 +184,10 @@ select {
 
 .card__profile--name {
   font-weight: var(--fw-800);
+}
+
+@media only screen and (min-width: 23rem) {
+  .card {
+    width: 100%;
+  }
 }
